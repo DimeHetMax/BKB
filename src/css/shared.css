@@ -281,7 +281,15 @@ h3 {
   text-align: center;
 }
 
+.desktop-only-link {
+  display: block;
+}
+
 @media (max-width: 900px) {
+  .desktop-only-link {
+    display: none;
+  }
+
   .desktop-nav {
     display: none;
   }
