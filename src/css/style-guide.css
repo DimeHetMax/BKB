@@ -1,0 +1,136 @@
+.guide-body {
+  background: #f3f4f6;
+}
+
+.style-guide {
+  width: min(100% - 32px, 1100px);
+  margin: 36px auto;
+}
+
+.guide-cover,
+.guide-section {
+  margin-bottom: 24px;
+  padding: 44px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.guide-cover {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+}
+
+.guide-cover h1,
+.guide-cover .eyebrow {
+  color: var(--white);
+}
+
+.colour-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.colour-card {
+  padding: 14px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.colour-card span {
+  height: 72px;
+  display: block;
+  margin-bottom: 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.colour-card strong,
+.colour-card small {
+  display: block;
+}
+
+.colour-card p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.type-example {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.visual-samples {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.visual-samples img {
+  height: 190px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.layout-grid,
+.interface-demo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.layout-grid article,
+.interface-demo > div {
+  padding: 24px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.mini-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mini-nav a {
+  padding: 8px 12px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.guide-card {
+  box-shadow: none;
+}
+
+@media (max-width: 900px) {
+  .layout-grid,
+  .interface-demo {
+    grid-template-columns: 1fr;
+  }
+
+  .colour-grid,
+  .visual-samples {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .guide-cover,
+  .guide-section {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .colour-grid,
+  .visual-samples {
+    grid-template-columns: 1fr;
+  }
+}

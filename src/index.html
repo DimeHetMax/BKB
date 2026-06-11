@@ -1,23 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bike King Borders | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">△</span>
+        <span>
+          <strong>BKB</strong>
+          <small>Bike King Borders</small>
+        </span>
+      </a>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+      <button class="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation">☰</button>
 
-    <load src="./partials/footer.html" />
+      <nav class="desktop-nav" id="site-navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="#bikes">Bikes</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="services.html" class="nav-cta">Book a Service</a>
+      </nav>
+    </div>
+  </header>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="eyebrow">Road • Mountain • Hybrid</p>
+          <h1>Explore the Borders by Bike</h1>
+          <p>
+            Bike sales, repairs and daily hire for road, mountain and hybrid riders.
+          </p>
+          <div class="hero-actions">
+            <a href="#bikes" class="btn btn-primary">View Bikes</a>
+            <a href="services.html" class="btn btn-secondary">Book a Service</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Why Choose Bike King Borders?</h2>
+          <p>Friendly local service for cyclists, visitors and families.</p>
+        </div>
+
+        <div class="cards three-cols">
+          <article class="feature-card">
+            <div class="icon">🚲</div>
+            <h3>Bike Sales</h3>
+            <p>New and used road, mountain and hybrid bikes for every level of rider.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon">⛰️</div>
+            <h3>Bike Hire</h3>
+            <p>Daily bike hire for local trails, family rides and weekend adventures.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon">🔧</div>
+            <h3>Repairs & Servicing</h3>
+            <p>Professional bike servicing to keep your ride safe and smooth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bikes">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Featured Bikes</h2>
+          <p>Choose the right bike for your next ride.</p>
+        </div>
+
+        <div class="bike-grid">
+          <article class="bike-card">
+            <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=800&q=80" alt="Mountain bike">
+            <h3>Mountain Bike</h3>
+            <p>From £25/day</p>
+          </article>
+
+          <article class="bike-card">
+            <img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=800&q=80" alt="Road bike">
+            <h3>Road Bike</h3>
+            <p>From £30/day</p>
+          </article>
+
+          <article class="bike-card">
+            <img src="https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=800&q=80" alt="Hybrid bike">
+            <h3>Hybrid Bike</h3>
+            <p>From £20/day</p>
+          </article>
+
+          <article class="bike-card">
+            <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=800&q=80" alt="Electric bike">
+            <h3>Electric Bike</h3>
+            <p>From £45/day</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contact" id="contact">
+      <div class="container contact-layout">
+        <div class="shop-image">
+          <img src="https://images.unsplash.com/photo-1522878129833-838a904a0e9e?auto=format&fit=crop&w=1000&q=80" alt="Bike shop">
+        </div>
+
+        <div class="contact-card">
+          <p class="eyebrow">Local cycling shop</p>
+          <h2>Visit Our Shop</h2>
+          <p>
+            Find us near the Borders cycling trails. We offer friendly advice, bike hire,
+            servicing and accessories.
+          </p>
+
+          <ul class="contact-list">
+            <li>📍 123 Trails Road, Melrose, TD6 9AU</li>
+            <li>🕘 Mon - Sat: 9:00 - 17:30</li>
+            <li>☎️ 01835 123456</li>
+            <li>✉️ hello@bikekingborders.co.uk</li>
+          </ul>
+
+          <a href="services.html" class="btn btn-primary">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="footer-logo">
+          <span class="logo-icon">△</span>
+          <span>
+            <strong>BKB</strong>
+            <small>Bike King Borders</small>
+          </span>
+        </a>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="#bikes">Bikes</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <a href="services.html">Bike Sales</a>
+        <a href="services.html">Bike Hire</a>
+        <a href="services.html">Repairs</a>
+        <a href="services.html">Accessories</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>123 Trails Road,<br>Melrose, TD6 9AU</p>
+        <p>01835 123456</p>
+        <p>hello@bikekingborders.co.uk</p>
+      </div>
+    </div>
+
+    <p class="copyright">© 2026 Bike King Borders. All rights reserved.</p>
+  </footer>
+  <script type="module" src="./main.js"></script>
+</body>
 </html>
