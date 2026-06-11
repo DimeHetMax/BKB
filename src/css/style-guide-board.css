@@ -416,3 +416,106 @@
     box-shadow: none;
   }
 }
+
+/* Modern desktop presentation */
+.board-page {
+  background:
+    radial-gradient(circle at 90% 5%, rgba(0, 113, 227, 0.1), transparent 32rem),
+    var(--background);
+}
+
+.board-main {
+  padding: 72px 0 96px;
+}
+
+.board-page .small-label,
+.board-page .panel h2,
+.board-page .panel h3,
+.board-page .h1-example,
+.board-page .h2-example,
+.board-page .button-primary,
+.board-page .button-secondary,
+.board-page .mini-logo strong {
+  font-family: inherit;
+}
+
+.board-page .board {
+  gap: 16px;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.board-page .panel {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.board-page .panel:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.board-page .panel h2 {
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.board-page .swatch {
+  border-radius: 12px;
+}
+
+.board-page .mini-button,
+.board-page .button-primary,
+.board-page .button-secondary,
+.board-page .nav-preview {
+  border-radius: 999px;
+}
+
+.board-page .button-primary {
+  box-shadow: 0 10px 24px rgba(0, 113, 227, 0.2);
+}
+
+.board-page .button-secondary {
+  background: var(--white);
+  color: var(--accent);
+  border-color: rgba(0, 113, 227, 0.2);
+}
+
+.board-page .nav-preview,
+.board-page .mobile-nav-preview {
+  background: var(--text);
+}
+
+.board-page .mobile-nav-preview {
+  border-radius: 16px;
+}
+
+.board-page .card-preview {
+  background: var(--white);
+  border-radius: 18px;
+}
+
+.board-page .explanation {
+  padding: 52px;
+  background: linear-gradient(145deg, #1d1d1f, #2b2d31);
+  border: 0;
+  border-radius: 30px;
+}
+
+.board-page .explanation h1 {
+  color: var(--white);
+}
+
+.board-page .explanation p {
+  color: rgba(255, 255, 255, 0.65);
+}
