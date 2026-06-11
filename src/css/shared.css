@@ -20,6 +20,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 84px;
 }
 
 body {
@@ -84,6 +85,26 @@ button {
 :focus-visible {
   outline: 3px solid rgba(0, 113, 227, 0.32);
   outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 200;
+  top: 12px;
+  left: 12px;
+  padding: 10px 16px;
+  background: var(--text);
+  color: var(--white);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  font-size: 14px;
+  font-weight: 650;
+  transform: translateY(-160%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 .eyebrow {
@@ -396,11 +417,20 @@ button {
   color: var(--white);
 }
 
+.site-footer a[href^="tel:"],
+.site-footer a[href^="mailto:"] {
+  width: fit-content;
+}
+
 .copyright {
   margin-top: 44px;
   color: rgba(255, 255, 255, 0.42) !important;
   font-size: 12px !important;
   text-align: center;
+}
+
+.site-footer > .copyright:first-child {
+  margin-top: 0;
 }
 
 .desktop-only-link {
@@ -571,6 +601,63 @@ button {
 
   .page-hero {
     padding: 80px 0 68px;
+  }
+
+  .site-footer {
+    padding: 34px 0 18px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 18px;
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-grid > div:last-child {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 16px;
+  }
+
+  .footer-grid > div:last-child h4 {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer .footer-logo {
+    justify-content: center;
+  }
+
+  .site-footer .footer-logo .logo-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .site-footer h4 {
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+
+  .site-footer a,
+  .site-footer p {
+    margin: 5px 0;
+    font-size: 12px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .site-footer a[href^="tel:"],
+  .site-footer a[href^="mailto:"] {
+    width: auto;
+  }
+
+  .copyright {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
 }
 

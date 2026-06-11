@@ -1,5 +1,18 @@
 const menuButton = document.querySelector('.menu-btn');
 const navigation = document.querySelector('.desktop-nav');
+const mainContent = document.querySelector('main');
+
+if (mainContent) {
+  mainContent.id ||= 'main-content';
+
+  const skipLink = document.createElement('a');
+  skipLink.className = 'skip-link';
+  skipLink.href = `#${mainContent.id}`;
+  skipLink.textContent = 'Skip to content';
+  document.body.prepend(skipLink);
+}
+
+document.querySelector('.desktop-nav .active')?.setAttribute('aria-current', 'page');
 
 const closeMenu = () => {
   if (!menuButton || !navigation) return;
